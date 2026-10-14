@@ -1,0 +1,2 @@
+ALTER TABLE "challenge_rounds" DROP CONSTRAINT "challenge_rounds_view_ck";--> statement-breakpoint
+ALTER TABLE "challenge_rounds" ADD CONSTRAINT "challenge_rounds_view_ck" CHECK ("challenge_rounds"."view" is null or "challenge_rounds"."view" in ('audio', 'light', 'timeline', 'chart', 'text', 'flag', 'eye', 'mirror'));

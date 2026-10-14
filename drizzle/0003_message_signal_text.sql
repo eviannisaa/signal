@@ -1,0 +1,2 @@
+ALTER TABLE "messages" DROP CONSTRAINT "messages_signal_ck";--> statement-breakpoint
+ALTER TABLE "messages" ADD CONSTRAINT "messages_signal_ck" CHECK ("messages"."signal" in ('text', 'audio', 'light', 'flag', 'eye', 'mirror'));

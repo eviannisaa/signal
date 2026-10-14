@@ -1,0 +1,2 @@
+ALTER TABLE "messages" ADD COLUMN "signal" text DEFAULT 'audio' NOT NULL;--> statement-breakpoint
+ALTER TABLE "messages" ADD CONSTRAINT "messages_signal_ck" CHECK ("messages"."signal" in ('audio', 'light', 'flag', 'eye', 'mirror'));
